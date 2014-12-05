@@ -9,34 +9,19 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class MainActivity extends Activity {
+public class Register extends Activity {
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Button loginbutton = (Button) findViewById(R.id.login);
-
-        loginbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent upanel = new Intent(getApplicationContext(), LoginActivity.class);
-                upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(upanel);
-                /**
-                 * Close Login Screen
-                 **/
-                finish();
-            }
-        });
-
-        Button registerbutton = (Button) findViewById(R.id.registro);
+        setContentView(R.layout.activity_register);
+        Button registerbutton = (Button) findViewById(R.id.btnRegister);
 
         registerbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent upanel = new Intent(getApplicationContext(), Register.class);
+                Intent upanel = new Intent(getApplicationContext(), MainActivity.class);
                 upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(upanel);
                 /**
@@ -45,15 +30,13 @@ public class MainActivity extends Activity {
                 finish();
             }
         });
-
-
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_register, menu);
         return true;
     }
 
