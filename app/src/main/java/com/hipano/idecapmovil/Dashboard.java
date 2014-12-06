@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class Dashborad extends Activity
+public class Dashboard extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
@@ -62,6 +62,8 @@ public class Dashborad extends Activity
             case 3:
                 mTitle = getString(R.string.title_section3);
                 break;
+            case 4:
+                mTitle=getString(R.string.title_section4);
             case 5:
             finish();
 
@@ -138,7 +140,7 @@ public class Dashborad extends Activity
         @Override
         public void onAttach(Activity activity) {
             super.onAttach(activity);
-            ((Dashborad) activity).onSectionAttached(
+            ((Dashboard) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }

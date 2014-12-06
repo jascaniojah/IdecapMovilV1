@@ -6,11 +6,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.hipano.idecapmovil.Dashborad$PlaceholderFragment">
+    tools:context="com.hipano.idecapmovil.Dashboard$PlaceholderFragment">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_idecap"
 
+        />
     <TextView
     android:id="@+id/section_label"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
+    android:layout_height="wrap_content"
+        />
 
 </RelativeLayout>

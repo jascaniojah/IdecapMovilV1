@@ -63,7 +63,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             @Override
             public void onClick(View view) {
                 //attemptLogin();
-                Intent upanel = new Intent(getApplicationContext(), Dashborad.class);
+                Intent upanel = new Intent(getApplicationContext(), Dashboard.class);
                 upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(upanel);
                 /**
