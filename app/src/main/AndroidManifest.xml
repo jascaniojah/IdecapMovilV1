@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.hipano.idecapmovil.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,16 +17,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.hipano.idecapmovil.LoginActivity"
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".Register"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name=".Dashboard"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name="com.hipano.idecapmovil.Register"
-            android:label="@string/app_name" >
+            android:name=".DashboardActivity"
+            android:label="@string/title_activity_dashboard" >
         </activity>
     </application>
 

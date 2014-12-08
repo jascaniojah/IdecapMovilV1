@@ -1,21 +1,25 @@
 package com.hipano.idecapmovil;
 
-import android.annotation.TargetApi;
-import android.app.ActionBar;
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.widget.DrawerLayout;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.support.v4.widget.DrawerLayout;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 
-public class Dashboard extends Activity
+public class DashboardActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
@@ -28,16 +32,14 @@ public class Dashboard extends Activity
      */
     private CharSequence mTitle;
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashborad);
+        setContentView(R.layout.activity_dashboard);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
-                getFragmentManager().findFragmentById(R.id.navigation_drawer);
+                getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
-
 
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(
@@ -48,7 +50,7 @@ public class Dashboard extends Activity
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
-        FragmentManager fragmentManager = getFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
                 .commit();
@@ -64,19 +66,24 @@ public class Dashboard extends Activity
                 break;
             case 3:
                 mTitle = getString(R.string.title_section3);
+
                 break;
             case 4:
-                mTitle=getString(R.string.title_section4);
+                mTitle = getString(R.string.title_section4);
+
+                break;
             case 5:
+                mTitle = getString(R.string.title_section5);
+
+                break;
+            case 6:
             finish();
-
-
-
+                break;
         }
     }
 
     public void restoreActionBar() {
-        ActionBar actionBar = getActionBar();
+        ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
@@ -89,7 +96,7 @@ public class Dashboard extends Activity
             // Only show items in the action bar relevant to this screen
             // if the drawer is not showing. Otherwise, let the drawer
             // decide what to show in the action bar.
-            getMenuInflater().inflate(R.menu.dashborad, menu);
+            getMenuInflater().inflate(R.menu.dashboard, menu);
             restoreActionBar();
             return true;
         }
@@ -136,14 +143,14 @@ public class Dashboard extends Activity
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_dashborad, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_dashboard, container, false);
             return rootView;
         }
 
         @Override
         public void onAttach(Activity activity) {
             super.onAttach(activity);
-            ((Dashboard) activity).onSectionAttached(
+            ((DashboardActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }

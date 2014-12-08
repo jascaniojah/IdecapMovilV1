@@ -47,7 +47,7 @@ public class LoginActivity extends Activity {
             @Override
             public void onClick(View view) {
                 //attemptLogin();
-                Intent upanel = new Intent(getApplicationContext(), Dashboard.class);
+                Intent upanel = new Intent(getApplicationContext(), DashboardActivity.class);
                 upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(upanel);
                 /**
