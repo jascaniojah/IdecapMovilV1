@@ -29,8 +29,10 @@
         <item name="actionModeBackground">@drawable/cab_background_top_iedecap</item>
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_iedecap</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Iedecap</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
 
-                <!-- Light.DarkActionBar specific -->
+        <!-- Light.DarkActionBar specific -->
         <item name="actionBarWidgetTheme">@style/Theme.Iedecap.Widget</item>
 
     </style>
