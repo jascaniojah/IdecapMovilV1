@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IdecapMovil.iml" filepath="$PROJECT_DIR$/IdecapMovil.iml" />
       <module fileurl="file://$PROJECT_DIR$/IdecapMovil3.iml" filepath="$PROJECT_DIR$/IdecapMovil3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IdecapMovilv1.0.iml" filepath="$PROJECT_DIR$/IdecapMovilv1.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

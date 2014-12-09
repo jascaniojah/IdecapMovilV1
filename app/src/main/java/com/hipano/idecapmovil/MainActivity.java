@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
+
+import static com.hipano.idecapmovil.R.drawable.botonregistro_oprimido160x60;
 
 
 public class MainActivity extends Activity {
@@ -14,12 +16,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button loginbutton = (Button) findViewById(R.id.login);
+       final ImageButton loginbutton = (ImageButton) findViewById(R.id.login);
 
         loginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                loginbutton.setImageResource(R.drawable.botonlogin_oprimido160x60);
                 Intent upanel = new Intent(getApplicationContext(), LoginActivity.class);
                 upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(upanel);
@@ -30,12 +32,12 @@ public class MainActivity extends Activity {
             }
         });
 
-        Button registerbutton = (Button) findViewById(R.id.registro);
+        final ImageButton registerbutton = (ImageButton) findViewById(R.id.registro);
 
         registerbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                registerbutton.setImageResource(botonregistro_oprimido160x60);
                 Intent upanel = new Intent(getApplicationContext(), Register.class);
                 upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(upanel);
