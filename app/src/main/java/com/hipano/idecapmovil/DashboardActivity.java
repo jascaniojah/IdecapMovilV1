@@ -2,6 +2,7 @@ package com.hipano.idecapmovil;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,7 +17,7 @@ import android.view.ViewGroup;
 
 
 public class DashboardActivity extends ActionBarActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks,CoursesFragment.OnFragmentInteractionListener,WelcomeFragment.OnFragmentInteractionListener,ProfileFragment.OnFragmentInteractionListener {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -50,10 +51,25 @@ public class DashboardActivity extends ActionBarActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
         switch(position) {
             case 0:
-                fragment = new CoursesFragment();
+                fragment = new WelcomeFragment();
                 break;
             case 1:
                 fragment = new CoursesFragment();
+                break;
+            case 2:
+                fragment = new CoursesFragment();
+                break;
+            case 3:
+                fragment = new CoursesFragment();
+                break;
+            case 4:
+                fragment = new CoursesFragment();
+                break;
+            case 5:
+                fragment = new ProfileFragment();
+                break;
+            case 6:
+                finish();
                 break;
         }
         fragmentManager.beginTransaction()
@@ -80,8 +96,12 @@ public class DashboardActivity extends ActionBarActivity
             case 5:
                 mTitle = getString(R.string.title_section5);
 
-                break;
+
             case 6:
+                mTitle = getString(R.string.title_section6);
+
+                break;
+            case 7:
                 Intent upanel = new Intent(getApplicationContext(), MainActivity.class);
                 upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(upanel);
@@ -121,6 +141,16 @@ public class DashboardActivity extends ActionBarActivity
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onFragmentInteraction(int id) {
+
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 
     /**

@@ -10,8 +10,9 @@
     <string name="title_section3">Diplomados</string>
     <string name="title_section4">Especializaciones</string>
     <string name="title_section5">Cursos Tecnicos</string>
-    <string name="title_section6">Cerrar Sesion</string>
-    <string name="hello_blank_fragment">Hello!r</string>
+    <string name="title_section6">Mi perfil</string>
+    <string name="title_section7">Cerrar Sesion</string>
+    <string name="hello_blank_fragment">Bienvenido a IDECAP movil</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
