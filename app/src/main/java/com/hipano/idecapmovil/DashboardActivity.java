@@ -46,9 +46,18 @@ public class DashboardActivity extends ActionBarActivity
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
+        Fragment fragment = new WelcomeFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
+        switch(position) {
+            case 0:
+                fragment = new CoursesFragment();
+                break;
+            case 1:
+                fragment = new CoursesFragment();
+                break;
+        }
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                .replace(R.id.container, fragment)
                 .commit();
     }
 
@@ -152,6 +161,7 @@ public class DashboardActivity extends ActionBarActivity
             ((DashboardActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
+
     }
 
 }
