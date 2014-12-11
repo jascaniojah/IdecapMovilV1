@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 
 public class Register extends Activity {
@@ -15,12 +15,12 @@ public class Register extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        Button registerbutton = (Button) findViewById(R.id.btnRegister);
+        final ImageButton registerbutton = (ImageButton) findViewById(R.id.btnRegister);
 
         registerbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                registerbutton.setImageResource(R.drawable.botonregistraroprimido);
                 Intent upanel = new Intent(getApplicationContext(), MainActivity.class);
                 upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(upanel);
