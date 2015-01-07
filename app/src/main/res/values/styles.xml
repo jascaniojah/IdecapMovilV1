@@ -4,5 +4,21 @@
     <style name="AppTheme" parent="@style/Theme.Iedecap">
         <!-- Customize your theme here. -->
     </style>
+    <style name="Theme.CustomActionBarTheme"
+        parent="@style/Theme.AppCompat.Light.DarkActionBar">
 
+        Support library compatibility -->
+        <item name="actionBarStyle">@style/Theme.CustomActionBarTheme.MyActionBar</item>
+    <!--<item name="android:actionBarStyle">@style/MyActionBar</item>-->
+
+</style>
+
+<!-- ActionBar styles -->
+    <style name="Theme.CustomActionBarTheme.MyActionBar"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/ActionBarColor</item>
+SS
+        <!-- Support library compatibility -->
+        <item name="background">@color/ActionBarColor</item>
+    </style>
 </resources>

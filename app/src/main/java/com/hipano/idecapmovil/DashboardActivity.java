@@ -49,21 +49,30 @@ public class DashboardActivity extends ActionBarActivity
         // update the main content by replacing fragments
         Fragment fragment = new WelcomeFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
+        final Bundle bundle = new Bundle();
+
         switch(position) {
             case 0:
                 fragment = new WelcomeFragment();
                 break;
             case 1:
                 fragment = new CoursesFragment();
+                bundle.putString("tipo_curso", "miscursos");
                 break;
             case 2:
                 fragment = new CoursesFragment();
+                bundle.putString("tipo_curso", "diplomados");
+
                 break;
             case 3:
                 fragment = new CoursesFragment();
+                bundle.putString("tipo_curso", "especializaciones");
+
                 break;
             case 4:
                 fragment = new CoursesFragment();
+                bundle.putString("tipo_curso", "cursostecnicos");
+
                 break;
             case 5:
                 fragment = new ProfileFragment();

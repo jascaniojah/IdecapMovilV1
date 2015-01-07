@@ -3,6 +3,7 @@ package com.hipano.idecapmovil;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,11 +12,12 @@ import android.widget.ImageButton;
 import static com.hipano.idecapmovil.R.drawable.botonregistro_oprimido160x60;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().show();
        final ImageButton loginbutton = (ImageButton) findViewById(R.id.login);
 
         loginbutton.setOnClickListener(new View.OnClickListener() {

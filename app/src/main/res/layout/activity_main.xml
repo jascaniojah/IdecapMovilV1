@@ -1,9 +1,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/fondo_inicio"
+    android:paddingTop="0dp"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/fondoimageninicio"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+
+        />
 
     <ImageButton
         android:layout_width="160dp"
@@ -15,6 +24,7 @@
         android:longClickable="true"
         android:clickable="true"
         android:src="@drawable/botonregistro160x60"
+        android:layout_marginLeft="8dp"
         android:background="@null"
         />
 
@@ -23,24 +33,16 @@
         android:layout_height="60dp"
         android:text="Login"
         android:src="@drawable/botondelogin160px"
+        android:layout_marginRight="8dp"
         android:id="@+id/login"
         android:clickable="true"
         android:background="@null"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+
          />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:gravity="center"
-        android:padding="20dp"
-        android:src="@drawable/textoinicial1"
-        android:layout_marginBottom="183dp"
-        android:layout_above="@+id/registro"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+
 
 
 </RelativeLayout>
